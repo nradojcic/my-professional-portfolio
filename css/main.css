@@ -1,0 +1,258 @@
+/* ==========================================================================
+    Custom styles
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  width: 100%;
+}
+
+.title {
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  font-size: 2.1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#intro {
+  padding: 5.5rem 1rem 5rem 1rem;
+}
+
+#projects,
+#contact {
+  padding: 2.5rem 1rem 2.5rem 1rem;
+}
+
+#intro,
+#contact {
+  background: radial-gradient(
+      ellipse 100% 100% at 100% 100%,
+      rgba(251, 84, 43, 0.9) 0%,
+      rgba(169, 27, 120, 0.9) 46%,
+      rgba(57, 45, 209, 0.9) 100%
+    ),
+    url("/img/background-pic.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+#topmenu {
+  float: left;
+}
+
+#logo {
+  width: 3.5em;
+  padding: 0.75em;
+}
+
+nav {
+  z-index: 10;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 0.4%;
+  top: -2%;
+  align-items: right;
+}
+
+nav li {
+  display: inline;
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 1em;
+  background-color: darkblue;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li a:hover {
+  border-width: 0 0 0.25em 0;
+  border-style: solid;
+  border-color: darkorange;
+}
+
+#home {
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#bio {
+  display: flex;
+}
+
+#bio-photo {
+  height: 25em;
+  padding-top: 2em;
+}
+
+#bio-description {
+  padding-left: 2em;
+}
+
+button {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 125%;
+  border-radius: 0.5em 0.25em;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  margin: 0.5em;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background-color: darkorange;
+  transform: scale(1.025) rotate(0.75deg);
+}
+
+button:active {
+  transform: translate(0, 0.2rem);
+  box-shadow: 0 0.1rem rgba(0, 0, 0, 0.25);
+}
+
+.social-button {
+  background-color: darkblue;
+}
+
+.email-button:hover {
+  background-color: darkblue;
+  transform: scale(1.05) rotate(-2.5deg);
+}
+
+.project-1 {
+  display: flex;
+  padding: 2.5rem 1rem 5.5rem 1rem;
+}
+
+.project-2 {
+  padding: 2.5rem 1rem 2.5rem 1rem;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.project-img {
+  width: 50rem;
+  height: auto;
+  padding-bottom: 1rem;
+}
+
+#project-cards {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+  margin: 0 1%;
+  background-color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-description {
+  text-align: center;
+}
+
+#contact {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* *************** Media queries ***************** */
+
+@media (max-width: 480px) {
+  nav {
+    font-size: 0.5rem;
+    /* display: none; */
+  }
+  #bio-photo,
+  .project-img {
+    padding-left: 10%;
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  #home {
+    padding: 0;
+    font-size: 0.6rem;
+  }
+
+  #bio,
+  .project-1,
+  .project-2 {
+    display: flexbox;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 320px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 960px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  body {
+    font-size: 1.2rem;
+    width: 80%;
+    margin-left: 10%;
+  }
+  #intro,
+  #contact {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* *************** end Media queries ***************** */
