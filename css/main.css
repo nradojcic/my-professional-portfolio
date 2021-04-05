@@ -1,7 +1,4 @@
-/* ==========================================================================
-    Custom styles
-   ========================================================================== */
-
+/* Global settings - common elements*/
 html {
   scroll-behavior: smooth;
 }
@@ -10,101 +7,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   width: 100%;
+  font-size: 110%;
 }
 
-.title {
-  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
-  font-size: 2.1em;
+.section-title {
+  text-align: center;
+  margin-top: 1rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-#intro {
-  padding: 5.5rem 1rem 5rem 1rem;
-}
-
-#projects,
-#contact {
-  padding: 2.5rem 1rem 2.5rem 1rem;
-}
-
-#intro,
-#contact {
-  background: radial-gradient(
-      ellipse 100% 100% at 100% 100%,
-      rgba(251, 84, 43, 0.9) 0%,
-      rgba(169, 27, 120, 0.9) 46%,
-      rgba(57, 45, 209, 0.9) 100%
-    ),
-    url("/img/background-pic.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  color: white;
-}
-
-#topmenu {
-  float: left;
-}
-
-#logo {
-  width: 3.5em;
-  padding: 0.75em;
-}
-
-nav {
-  z-index: 10;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  right: 0.4%;
-  top: -2%;
-  align-items: right;
-}
-
-nav li {
-  display: inline;
-  float: left;
-}
-
-li a {
-  display: block;
-  padding: 1em;
-  background-color: darkblue;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-li a:hover {
-  border-width: 0 0 0.25em 0;
-  border-style: solid;
-  border-color: darkorange;
-}
-
-#home {
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#bio {
-  display: flex;
-}
-
-#bio-photo {
-  height: 25em;
-  padding-top: 2em;
-}
-
-#bio-description {
-  padding-left: 2em;
+.title-underline {
+  width: 200px;
+  height: 10px;
+  margin: 0 auto;
+  background: orange;
+  margin-bottom: 2rem;
 }
 
 button {
@@ -115,7 +31,7 @@ button {
   font-size: 125%;
   border-radius: 0.5em 0.25em;
   border: none;
-  outline: none;
+  outline: none !important;
   padding: 0.5em;
   margin: 0.5em;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
@@ -140,118 +56,240 @@ button:active {
   transform: scale(1.05) rotate(-2.5deg);
 }
 
-.project-1 {
-  display: flex;
-  padding: 2.5rem 1rem 5.5rem 1rem;
+/* .section-divider {
+  height: 7rem;
+} */
+
+/* Top Menu section - Navbar */
+#topmenu {
+  background: darkblue;
+  color: white;
+  position: fixed;
+  z-index: 10;
+  list-style-type: none;
+  color: white;
+  font-size: 1.25rem;
+  width: 100vw;
 }
 
-.project-2 {
+#topmenu .logo {
+  height: 3.5rem;
+}
+
+#topmenu .navbar-toggler-icon {
+  font-size: 1.25rem;
+  color: white;
+}
+
+#topmenu a {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  margin: 0 0.4rem;
+  border: 0.15rem solid darkblue;
+}
+
+#topmenu a:hover {
+  border-bottom: 0.15rem solid orange;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Intro = Home page + Bio section */
+#intro {
+  background: radial-gradient(
+      ellipse 100% 100% at 100% 100%,
+      rgba(251, 84, 43, 0.9) 0%,
+      rgba(169, 27, 120, 0.9) 46%,
+      rgba(57, 45, 209, 0.9) 100%
+    ),
+    url("/img/background-pic.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* Home Page section */
+#home .container {
+  min-height: 100vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#home .title {
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: white;
+  line-height: 2;
+}
+
+#home .orange-underline {
+  font-size: 105%;
+  font-weight: bold;
+  border-bottom: 0.45rem solid orange;
+}
+
+/* Bio section */
+#bio {
+  padding: 5rem 0 5rem 0;
+}
+
+#bio .orange-underline {
+  font-size: 125%;
+  font-weight: bold;
+  border-bottom: 0.2rem solid orange;
+}
+
+#bio img {
+  border-radius: 3.5em 0.5em;
+}
+
+#bio .web-dev {
+  padding: 1rem 0;
+}
+
+#skills {
+  padding: 5rem 0 1.5rem 0;
+}
+
+/* Individual Projects section */
+#projects {
+  padding: 5rem 0 0 0;
+}
+
+#projects .project-1 {
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+#projects .project-2 {
   padding: 2.5rem 1rem 2.5rem 1rem;
   background-color: rgb(240, 240, 240);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: row-reverse;
 }
 
-.project-img {
-  width: 50rem;
-  height: auto;
-  padding-bottom: 1rem;
+#projects .project-3 {
+  padding: 4rem 0 2.5rem 0;
 }
 
+#projects .title {
+  font-size: 110%;
+  font-weight: bold;
+}
+
+#projects .blue-underline {
+  font-size: 110%;
+  font-weight: bold;
+  border-bottom: 0.2rem solid darkblue;
+}
+
+/* Project cards section */
 #project-cards {
-  display: flex;
-  flex-direction: row;
+  padding: 1rem 0rem 3rem 0rem !important;
+  margin-bottom: 3rem;
 }
 
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  transition: 0.4s;
-  margin: 0 1%;
-  background-color: white;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
-}
-
-.card-description {
+#project-cards a {
+  display: block !important;
+  text-decoration: none !important;
   text-align: center;
 }
 
+#project-cards a:hover {
+  transform: scale(1.025);
+}
+
+#project-cards a:active {
+  transform: translate(0, 0.2rem);
+  box-shadow: 0 0.1rem rgba(0, 0, 0, 0.25);
+}
+
+/* Contact section */
 #contact {
   text-align: center;
-  margin-top: 1em;
+  padding: 5rem 0 5rem 0 !important;
+  background: radial-gradient(
+      ellipse 100% 100% at 100% 100%,
+      rgba(251, 84, 43, 0.9) 0%,
+      rgba(169, 27, 120, 0.9) 46%,
+      rgba(57, 45, 209, 0.9) 100%
+    ),
+    url("/img/background-pic.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+#contact .orange-underline {
+  font-size: 110%;
+  font-weight: bold;
+  border-bottom: 0.4rem solid orange;
 }
 
 /* *************** Media queries ***************** */
-
-@media (max-width: 480px) {
-  nav {
-    font-size: 0.5rem;
-    /* display: none; */
+@media (max-width: 576px) {
+  #projects img {
+    margin: 1rem 0;
   }
-  #bio-photo,
-  .project-img {
-    padding-left: 10%;
-    width: 80%;
-    height: auto;
+
+  #home .title {
+    font-size: 1.8rem;
+  }
+
+  .section-divider {
+    height: 1rem;
   }
 }
 
-@media (max-width: 640px) {
-  body {
-    font-size: 0.8rem;
+@media (min-width: 576px) {
+  #home .title {
+    font-size: 1.8rem;
   }
 
-  #home {
-    padding: 0;
-    font-size: 0.6rem;
-  }
-
-  #bio,
-  .project-1,
-  .project-2 {
-    display: flexbox;
-    flex-wrap: wrap;
+  .section-divider {
+    height: 1rem;
   }
 }
 
-@media (min-width: 320px) {
-  body {
-    font-size: 0.8rem;
+@media (min-width: 768px) {
+  #home .title {
+    font-size: 1.9rem;
+  }
+
+  #bio img {
+    margin-top: 1.5rem;
+  }
+
+  .section-divider {
+    height: 7rem;
   }
 }
 
-@media (min-width: 640px) {
-  body {
-    font-size: 0.9rem;
+@media (min-width: 992px) {
+  #home .title {
+    font-size: 2.5rem;
+  }
+
+  #bio img {
+    margin-top: 1.5rem;
+  }
+
+  .section-divider {
+    height: 7rem;
   }
 }
 
-@media (min-width: 960px) {
-  body {
-    font-size: 1rem;
+@media (min-width: 1200px) {
+  #home .title {
+    font-size: 3rem;
   }
-}
 
-@media (min-width: 1100px) {
-  body {
-    font-size: 1.2rem;
+  #bio img {
+    margin-top: 1.5rem;
   }
-}
 
-@media (min-width: 1500px) {
-  body {
-    font-size: 1.2rem;
-    width: 80%;
-    margin-left: 10%;
-  }
-  #intro,
-  #contact {
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+  .section-divider {
+    height: 7rem;
   }
 }
 
