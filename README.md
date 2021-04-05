@@ -1,5 +1,5 @@
 # My-Professional-Portfolio Website <https://nebojsa.ca>
-### Created from scratch using HTML and CSS. Simple, fast, effective and responsive.
+### Created from scratch using HTML, CSS and Bootstrap. Simple, fast, effective and responsive.
 
 <img src="https://nradojcic.github.io/project-screenshots/Project-1a.jpg" >
 <img src="https://nradojcic.github.io/project-screenshots/Project-1b.jpg" >
