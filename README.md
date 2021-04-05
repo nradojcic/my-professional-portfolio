@@ -6,6 +6,6 @@
 
 **Problem:** How can I demonstrate some of my web development work projects online, and provide professional resume and contact options to interested clients, all in one place?
 
-**Action:** Created a professional portfolio website. Used blank HTML5 Boilerplate as a starting point. Programmed the webpage using HTML5, CSS3. Added media queries to address responsive styling of the website at different screen resolutions. The website is deployed on inexpensive but effective web-hosting shared server based on Linux stack.
+**Action:** Created a professional portfolio website. Programmed the webpage using HTML5, CSS3, Bootstrap. Added media queries to address responsive styling of the website at different screen resolutions. The website is deployed on inexpensive but effective web-hosting shared server based on LAMP stack.
 
 **Result:** A simple responsive landing page, containing general Resume, Technical skills, and description and links of representative projects. The webpage is fast loading, and simple to use. Adapting to various devices (desktop/laptop/phone/tablet) and different screen sizes. Providing professional looking result, with the use of fundamental principles and technologies.
